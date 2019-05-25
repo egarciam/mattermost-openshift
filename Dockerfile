@@ -1,12 +1,13 @@
 FROM alpine:3.8
 
-LABEL maintainer="Thomas Schwärzl <thomas.schwaerzl@nttdata.com>"
+LABEL maintainer="Ernesto Garcia del Moral <ernesto.garcia@orange.com>"
+# based on the work of Thomas Schwarzl <thomas.schwaerzl@nttdata.com>
 # based on the work of Christoph Görn <goern@b4mad.net>
 # based on the work of Takayoshi Kimura <tkimura@redhat.com>
 
 ENV container docker
-ENV MATTERMOST_VERSION 5.10.0
-ENV MATTERMOST_VERSION_SHORT 5100
+ENV MATTERMOST_VERSION 5.11.0
+ENV MATTERMOST_VERSION_SHORT 5110
 ARG PUID=2000
 ARG PGID=2000
 

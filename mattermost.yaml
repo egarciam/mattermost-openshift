@@ -20,10 +20,10 @@ metadata:
     openshift.io/display-name: Mattermost
     tags: mattermost
     iconClass: fa fa-comments
-    template.openshift.io/documentation-url: https://github.com/tschwaerzl/mattermost-openshift/blob/master/README.md
+    template.openshift.io/documentation-url: https://github.com/egarciam/mattermost-openshift/blob/master/README.md
     template.openshift.io/long-description: This template provides a Mattermost service, it depends on a Secret and PostgreSQL.
     template.openshift.io/provider-display-name: Mattermost Community
-    template.openshift.io/support-url: https://github.com/tschwaerzl/mattermost-openshift/issues
+    template.openshift.io/support-url: https://github.com/egarciam/mattermost-openshift/issues
 
 objects:
 - kind: PersistentVolumeClaim
@@ -50,7 +50,7 @@ objects:
         version: '${MATTERMOST_VERSION}'
       from:
         kind: DockerImage
-        name: 'docker.io/tschwaerzl/mattermost-openshift:${MATTERMOST_VERSION}'
+        name: 'docker.io/egarciadelmoral/mattermost-openshift:${MATTERMOST_VERSION}'
 - kind: DeploymentConfig
   apiVersion: v1
   metadata:
@@ -180,7 +180,7 @@ parameters:
   value: mattermost
 - name: MATTERMOST_VERSION
   required: true
-  value: '5.10.0'
+  value: '5.11.0'
 - name: VOLUME_CAPACITY
   required: true
   value: 10G
